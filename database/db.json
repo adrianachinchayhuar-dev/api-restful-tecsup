@@ -1,5 +1,78 @@
 {
-  "tickets": [],
+  "tickets": [
+    {
+      "id": "22880837-de0e-41d1-adfa-70b6e00f0146",
+      "title": "Alerta de prueba de correo",
+      "description": "Comprobando si llega el correo real a mi Gmail",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "23b32d26-cf8e-42ce-ad6f-c2566eea5cb1",
+      "title": "Prueba de correo 2",
+      "description": "Verificando llegada de notificación",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "42e00c2b-9b35-4c9d-bbdf-152ac2756b7e",
+      "title": "Prueba de correo 2",
+      "description": "Verificando llegada de notificación",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "a1ea679f-5807-40b8-be54-267cff7aa5cd",
+      "title": "Prueba de correo 3",
+      "description": "Verificando llegada de notificación---",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "afbbfb69-16f0-4010-ae69-cb079415c53c",
+      "title": "Prueba de correo 4",
+      "description": "Verificando llegada de notificación---000",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "a45903f2-7efd-44e5-b6cf-8916cbe332c3",
+      "title": "Prueba de correo 5",
+      "description": "Verificando llegada de notificación---000000",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "8b5647d7-0346-4fd5-af09-bcf85467111c",
+      "title": "Prueba de correo 6",
+      "description": "Verificando llegada de notificación al correo",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "a7ab1117-4371-4bc5-a499-0a74bc274a03",
+      "title": "Prueba de correo 7",
+      "description": "Verificando llegada de notificación al correo",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "989a9662-3758-4a76-9fef-cbe26fbf7c06",
+      "title": "Prueba de correo",
+      "description": "Verificando llegada de notificación al correo",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    }
+  ],
   "notifications": [
     {
       "id": "dde10e88-5612-41ae-8d50-a9f29eb32d53",
@@ -21,6 +94,69 @@
       "message": "El ticket 395ec4a4-98ed-46be-8db2-c64c732321cd cambió a asignado",
       "status": "pending",
       "ticketId": "395ec4a4-98ed-46be-8db2-c64c732321cd"
+    },
+    {
+      "id": "ce8e6da2-aa6f-4354-ac0f-28bff7423a7b",
+      "type": "email",
+      "message": "Nuevo ticket creado: Alerta de prueba de correo",
+      "status": "pending",
+      "ticketId": "22880837-de0e-41d1-adfa-70b6e00f0146"
+    },
+    {
+      "id": "20617fcb-6b68-4064-be7f-eddb9f220de0",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo 2",
+      "status": "pending",
+      "ticketId": "23b32d26-cf8e-42ce-ad6f-c2566eea5cb1"
+    },
+    {
+      "id": "8d09ed4f-3cda-484c-8bfb-342539db28c7",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo 2",
+      "status": "pending",
+      "ticketId": "42e00c2b-9b35-4c9d-bbdf-152ac2756b7e"
+    },
+    {
+      "id": "1550e76a-4125-430d-b3d9-f53159d31a8c",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo 3",
+      "status": "pending",
+      "ticketId": "a1ea679f-5807-40b8-be54-267cff7aa5cd"
+    },
+    {
+      "id": "82e59234-cac6-4a02-aa89-fa7808c3ca40",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo 4",
+      "status": "pending",
+      "ticketId": "afbbfb69-16f0-4010-ae69-cb079415c53c"
+    },
+    {
+      "id": "8f058445-cdcd-4379-8445-81579d6bd4af",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo 5",
+      "status": "pending",
+      "ticketId": "a45903f2-7efd-44e5-b6cf-8916cbe332c3"
+    },
+    {
+      "id": "7cbaeec9-3636-44a9-8827-555ae3e88f2f",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo 6",
+      "status": "pending",
+      "ticketId": "8b5647d7-0346-4fd5-af09-bcf85467111c"
+    },
+    {
+      "id": "0a56d199-c1d7-4896-ad34-7ec9dd8ad7a6",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo 7",
+      "status": "pending",
+      "ticketId": "a7ab1117-4371-4bc5-a499-0a74bc274a03"
+    },
+    {
+      "id": "516f0a8d-94fb-4969-84ce-3226910fbf42",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de correo",
+      "status": "pending",
+      "ticketId": "989a9662-3758-4a76-9fef-cbe26fbf7c06"
     }
   ]
 }

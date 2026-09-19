@@ -17,9 +17,15 @@ app.get("/", (req, res) => {
 const ticketRoutes = require("./routes/ticket.routes");
 const notificationRoutes = require("./routes/notification.routes");
 
+// Importar Middleware de errores
+const errorHandler = require("./middlewares/errorHandler"); 
+
 //rutas bases
 app.use("/tickets", ticketRoutes);
 app.use("/notifications", notificationRoutes);
+
+// REGISTRAR EL MIDDLEWARE
+app.use(errorHandler);
 
 const PORT = 3000;
 app.listen(PORT, () => {

@@ -40,14 +40,50 @@ class TicketService {
     return ticket;
   }
 
-  list() {
-    return this.repo.findAll();
+  // Método de listado con soporte para paginación
+  list(page, limit) {
+    const tickets = this.repo.findAll();
+
+    // Si no se envían page o limit, retorna todos los tickets normalmente
+    if (!page || !limit) {
+      return tickets;
+    }
+
+    const pageNum = parseInt(page, 10) || 1;
+    const limitNum = parseInt(limit, 10) || 5;
+
+    const startIndex = (pageNum - 1) * limitNum;
+    const endIndex = pageNum * limitNum;
+
+    const paginatedTickets = tickets.slice(startIndex, endIndex);
+
+    return {
+      totalItems: tickets.length,
+      totalPages: Math.ceil(tickets.length / limitNum),
+      currentPage: pageNum,
+      limit: limitNum,
+      data: paginatedTickets
+    };
+  }
+
+  // Método para obtener notificaciones por ID de Ticket
+  getTicketNotifications(ticketId) {
+    // Verifica si el ticket existe previamente
+    const ticket = this.repo.findById(ticketId);
+    if (!ticket) {
+      const error = new Error("Ticket no encontrado");
+      error.statusCode = 404;
+      throw error;
+    }
+    return this.notificationService.getByTicketId(ticketId);
   }
 
   deleteTicket(id) {
     const deleted = this.repo.delete(id);
     if (!deleted) {
-      throw new Error("Ticket no encontrado");
+      const error = new Error("Ticket no encontrado");
+      error.statusCode = 404;
+      throw error;
     }
     return true;
   }

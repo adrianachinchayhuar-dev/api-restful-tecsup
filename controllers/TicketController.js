@@ -6,8 +6,15 @@ exports.create = (req, res) => {
   res.status(201).json(ticket);
 };
 
-exports.list = (req, res) => {
-  res.status(200).json(service.list());
+// Reemplaza el método list por este:
+exports.list = (req, res, next) => {
+  try {
+    const { page, limit } = req.query;
+    const result = service.list(page, limit);
+    res.status(200).json(result);
+  } catch (err) {
+    next(err); // Pasa el error al middleware errorHandler
+  }
 };
 
 exports.assign = (req, res) => {
@@ -34,3 +41,14 @@ exports.delete = (req, res) => {
     res.status(404).json({ message: err.message });
   }
 }
+
+// Agrega esta función al final de TicketController.js:
+exports.getNotifications = (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const notifications = service.getTicketNotifications(id);
+    res.status(200).json(notifications);
+  } catch (err) {
+    next(err);
+  }
+};
